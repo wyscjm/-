@@ -33,13 +33,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timers = new System.Windows.Forms.Label();
+            this.label_total_number = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(108, 307);
+            this.button1.Location = new System.Drawing.Point(144, 409);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 90);
+            this.button1.Size = new System.Drawing.Size(180, 120);
             this.button1.TabIndex = 0;
             this.button1.Text = "run";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,10 +51,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Font = new System.Drawing.Font("宋体", 50F);
-            this.label1.Location = new System.Drawing.Point(136, 111);
+            this.label1.Font = new System.Drawing.Font("SimSun", 50F);
+            this.label1.Location = new System.Drawing.Point(181, 148);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 67);
+            this.label1.Size = new System.Drawing.Size(77, 84);
             this.label1.TabIndex = 2;
             this.label1.Text = "1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -67,24 +70,38 @@
             // timers
             // 
             this.timers.AutoSize = true;
-            this.timers.Font = new System.Drawing.Font("宋体", 15F);
-            this.timers.Location = new System.Drawing.Point(261, 34);
+            this.timers.Font = new System.Drawing.Font("SimSun", 15F);
+            this.timers.Location = new System.Drawing.Point(348, 45);
+            this.timers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timers.Name = "timers";
             this.timers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.timers.Size = new System.Drawing.Size(19, 20);
+            this.timers.Size = new System.Drawing.Size(25, 25);
             this.timers.TabIndex = 3;
             this.timers.Text = "1";
             // 
+            // label_total_number
+            // 
+            this.label_total_number.AutoSize = true;
+            this.label_total_number.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total_number.Location = new System.Drawing.Point(40, 42);
+            this.label_total_number.Name = "label_total_number";
+            this.label_total_number.Size = new System.Drawing.Size(63, 29);
+            this.label_total_number.TabIndex = 4;
+            this.label_total_number.Text = "总数";
+            this.label_total_number.Click += new System.EventHandler(this.label2_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 433);
+            this.ClientSize = new System.Drawing.Size(535, 577);
+            this.Controls.Add(this.label_total_number);
             this.Controls.Add(this.timers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "自动点名器 V1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -97,6 +114,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label timers;
+        private System.Windows.Forms.Label label_total_number;
     }
 }
 
